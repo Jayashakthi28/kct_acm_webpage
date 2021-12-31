@@ -7,12 +7,17 @@ async function readDB(reference) {
     return await get(ref(database, reference));
 }
 
+function dateSplitter(date){
+    date=date.split("-");
+    return date[2]+"-"+date[1]+"-"+date[0];
+}
+
 async function EventsFiller(){
     let data=await readDB("data");
     data=await data.val();
     data=await [...data];
     data=data.sort((a,b)=>{
-        if(a["date"]>b["date"]){
+        if(b["date"]>a["date"]){
             return 1;
         }
         else if(b["date"]===a["date"]){
@@ -22,10 +27,10 @@ async function EventsFiller(){
             return -1;
         }
     });
-    console.log(data);
     await data.forEach(d=>{
         let element=document.createElement("div");
         element.classList.add("event-cont");
+        let date=dateSplitter(d['date']);
         element.innerHTML=` <div class="img-cont">
         <img src="${d["url"]}" alt="Event Image">
         </div>
@@ -39,7 +44,7 @@ async function EventsFiller(){
             <div class="wrapper">
                 <div class="event-date-cont">
                     <h2 class="happen-cont">Happened On:</h2>
-                    <div class="date-cont">${d["date"]}</div>
+                    <div class="date-cont">${date}</div>
                 </div>
             </div>
         </div>
