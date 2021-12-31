@@ -73,6 +73,7 @@ body{
 }
 .wrapper{
     margin-left: 2rem;
+    text-align: center;
 }
 h1{
     font-family: 'Kanit';
