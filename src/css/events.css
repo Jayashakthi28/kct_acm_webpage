@@ -7,7 +7,7 @@
 .main-cont{
     padding: 2rem;
     margin-top: 80px;
-    min-height: auto;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
