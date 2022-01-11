@@ -1,6 +1,7 @@
 const path=require("path")
 const htmlPlugin=require("html-webpack-plugin")
 const cssPlugin=require('mini-css-extract-plugin')
+const TerserPlugin = require('terser-webpack-plugin');
 const webpack=require('webpack')
 module.exports={
     entry:{
@@ -63,5 +64,14 @@ module.exports={
                 }
             }
         ]
-    }
+    },
+    optimization: {
+        minimizer: [
+          new TerserPlugin({
+            // Use multi-process parallel running to improve the build speed
+            // Default number of concurrent runs: os.cpus().length - 1
+            parallel: true
+          }),
+        ],
+      },
 };

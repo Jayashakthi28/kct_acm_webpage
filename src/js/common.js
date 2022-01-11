@@ -47,4 +47,4 @@ window.onload = function () {
       window.addEventListener("scroll", () => {
       let max = document.body.scrollHeight - innerHeight;
       barrer.style.width =`${(pageYOffset/max)*100}%`;
-      });
+  });
