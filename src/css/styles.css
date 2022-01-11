@@ -4,6 +4,9 @@
   --green-grad:transparent linear-gradient(359deg, #5CA895 0%, #96D5C5 100%) 0% 0% no-repeat padding-box;
 }
 
+body{
+  background-color: #eeeeee;
+}
 
 /**************************MAIN BACKGROUND**************************************/
 .main-back {
@@ -151,18 +154,46 @@
 
 /*************************************/ /*ABOUT************************************/
 /*****************************************OUR TEAM*************************************/
-.our-team{
+.our-team .team-members{
   justify-content: center;
   flex-wrap: wrap;
   display: flex;
   background-color: var(--blue-main);
   background-color: #eeeeee;
 }
+
+.heading-wrapper{
+  background-color: #eeeeee;
+}
+
+.our-team .year-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.our-team .year-cont h2{
+  font-family: 'Kanit';
+  margin-right: 0.5rem;
+}
+
+.our-team .year-cont select{
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-family: 'Kanit';
+  background-color: var(--green-main);
+  color: var(--blue-main);
+  border-radius: 0.5rem;
+  border: 0;
+  outline: 0;
+}
+
 .our-team h1{
   color: var(--blue-main);
   font-family: "Kanit";
   padding-top: 1rem;
   text-align: center;
+  background-color: transparent;
   width: 100%;
   font-size: 2rem;
   font-weight: bolder;
@@ -259,6 +290,7 @@
   .main-back{
     background: url('../assests/70310711_143095153637083_6314318445248146896_n.jpg');
     background-size: cover;
+    background-position: center center;
   }
   .our-team{
     background-image: none;

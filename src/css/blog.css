@@ -1,0 +1,66 @@
+@import url('./all.css');
+@import url('./common.css');
+
+
+.blog-cont{
+    min-height: calc(100vh - 65px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+
+.blog-card{
+    height: 350px;
+    width: 300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--blue-main);
+    margin: 0.5rem;
+    border-radius: 1rem;
+    font-family: 'Kanit';
+    overflow: hidden;
+}
+
+
+.blog-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 65px;
+}
+
+.blog-wrapper h1{
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    color: var(--blue-main);
+    font-family: 'Kanit';
+}
+
+
+.blog-card .img-cont{
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.blog-card img{
+    width: 250px;
+}
+
+.blog-card a{
+    color: var(--green-main);
+    line-height: 1.9rem;
+    text-align: center;
+}
+
+#page-ref li{
+    color: var(--green-main);
+}
+#page-ref .line{
+    visibility: visible;
+}
