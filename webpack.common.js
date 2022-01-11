@@ -5,7 +5,8 @@ const webpack=require('webpack')
 module.exports={
     entry:{
         index:'./src/js/first.js',
-        second:'./src/js/second.js'
+        second:'./src/js/second.js',
+        blog:'./src/js/blog.js'
     },
     plugins:[
         new htmlPlugin({
@@ -17,6 +18,11 @@ module.exports={
             template:'./src/events.html',
             chunks:['second'],
             filename:'events.html'
+        }),
+        new htmlPlugin({
+            template:'./src/blog.html',
+            chunks:['blog'],
+            filename:'blog.html'
         }),
         new cssPlugin({
             filename:'[name].[hash].css'
