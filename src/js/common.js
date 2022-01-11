@@ -11,7 +11,7 @@ toggleCollapse.onclick=()=>{
       $('.ham').addClass("fa-bars").removeClass("fa-times")
     }
 }
-const speed = 1000;
+const speed = 500;
 
     $('a[href*="#"]')
       .filter((i, a) => a.getAttribute('href').startsWith('#') || a.href.startsWith(`${location.href}#`))
@@ -32,15 +32,15 @@ var animation=bodymovin.loadAnimation({
 	autoplay:true,
 	path:'./assets/final_data.json'
 })
-animation.setSpeed(2);
+animation.setSpeed(3);
 window.onload = function () {
     window.setTimeout(function () {
       $("#body").addClass("body");
-    }, 100);
+    }, 5);
     
   };
   $(window).on("load", function () {
-    $("#page-load").delay(100).fadeOut("slow");
+    $("#page-load").delay(5).fadeOut("slow");
   });
   /********************************************************************/
   let barrer= document.getElementById("progress");

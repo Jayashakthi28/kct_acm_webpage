@@ -13,9 +13,12 @@ function dateSplitter(date){
 }
 
 async function EventsFiller(){
-    let data=await readDB("data");
-    data=await data.val();
-    data=await [...data];
+    let dataObj=await readDB("data");
+    dataObj=await dataObj.val();
+    let data=[]
+    for(let key in dataObj){
+        data.push(dataObj[key]);
+    }
     data=data.sort((a,b)=>{
         if(b["date"]>a["date"]){
             return 1;
