@@ -101,8 +101,9 @@ async function teamFiller(){
         temp+=`<option value="${key}" selected>${key}</option>`
     }
     let yearCont= document.querySelector("#year");
-    dataFiller(yearCont.value,teamData);
     yearCont.innerHTML=temp;
+    console.log(yearCont.value);
+    dataFiller(yearCont.value,teamData);
     temp="";
     yearCont.addEventListener("change",(e)=>{
         dataFiller(e.target.value,teamData);
