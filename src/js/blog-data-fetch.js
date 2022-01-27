@@ -15,6 +15,7 @@ export async function blogFiller(){
         arr.push(data[key]);
     }
     let t=``;
+    arr.sort(()=>(-1));
     arr.forEach(d=>{
         t+=`<div class="blog-card">
         <div class="img-cont">
