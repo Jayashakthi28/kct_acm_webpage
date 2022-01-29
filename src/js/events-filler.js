@@ -56,13 +56,14 @@ async function EventsFiller() {
     dataObj[key]["year"]=dataObj[key].date.split('-')[0];
     MainData.push(dataObj[key]);
     if(dateObj?.[dataObj[key].date]){
-        dateObj.dataObj[key].date.push(dataObj[key]);
+        dateObj[dataObj[key].date].push(dataObj[key]);
     }
     else{
         dateObj[dataObj[key].date] = [];
         dateObj[dataObj[key].date].push(dataObj[key]);
     }
   }
+
   await sorterFiller(dataObj);
   let data=await Sorter(MainData,'desc');
   dataFiller(data);
@@ -103,7 +104,11 @@ function dataFiller(data){
 function sorterFiller(data){
     let yearArr=[];
     let MonthArr=[];
-    data.forEach(d=>{
+    let tempData=[];
+    for(let key in data){
+      tempData.push(data[key]);
+    }
+    tempData.forEach(d=>{
         let date=d.date.split('-');
         yearArr.push(date[0]);
         MonthArr.push(date[1]);
