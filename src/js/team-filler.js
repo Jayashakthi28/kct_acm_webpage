@@ -14,9 +14,6 @@ function vanillaTilter(){
     max: 30,
     speed: 3000
     })}
-    else {
-        console.log(w);
-    }
 }
 
 
@@ -102,7 +99,6 @@ async function teamFiller(){
     }
     let yearCont= document.querySelector("#year");
     yearCont.innerHTML=temp;
-    console.log(yearCont.value);
     dataFiller(yearCont.value,teamData);
     temp="";
     yearCont.addEventListener("change",(e)=>{
