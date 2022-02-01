@@ -115,7 +115,8 @@ function sorterFiller(data){
     })
     yearArr=[...new Set(yearArr)];
     MonthArr=[...new Set(MonthArr)];
-
+    MonthArr.sort();
+    yearArr.sort();
     yearArr.forEach(d=>{
         sorter[0].innerHTML+=`<option value="${d}">${d}</option>`;
     })
